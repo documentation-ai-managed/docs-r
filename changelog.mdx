@@ -1,0 +1,130 @@
+---
+title: Changelog
+description: Track the evolution of R with details on releases, updates, and improvements.
+---
+
+## Changelog Overview
+
+Stay current with R's latest releases. You receive automatic notifications for updates, and this page details every change, from new features to critical bug fixes. Check here regularly to see how R evolves to better serve your documentation needs.
+
+<Callout kind="info">
+  Upgrade to the latest version using your preferred package manager. R follows semantic versioning for predictable updates.
+</Callout>
+
+<Columns cols={3}>
+  <Card title="Latest" icon="zap" href="#latest">
+    v1.2.0 - New collaboration tools
+  </Card>
+  <Card title="Previous" icon="package" href="#previous">
+    v1.1.0 - Performance boosts
+  </Card>
+  <Card title="Initial" icon="rocket" href="#initial">
+    v1.0.0 - Core launch
+  </Card>
+</Columns>
+
+## Upgrade Instructions
+
+Follow these steps to update R in your project.
+
+<Steps>
+  <Step title="Check Current Version" icon="package">
+    Run this command to view your installed version:
+    ```bash
+    r --version
+    ```
+  </Step>
+  <Step title="Update Package" icon="download">
+    <Tabs>
+      <Tab title="npm" icon="nodejs">
+        ```bash
+        npm update r-docs@latest
+        ```
+      </Tab>
+      <Tab title="yarn" icon="package">
+        ```bash
+        yarn upgrade r-docs@latest
+        ```
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step title="Verify Update" icon="check-circle">
+    Restart your server and confirm the new version loads without issues.
+  </Step>
+</Steps>
+
+## Recent Releases
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]} id="latest">
+
+## New Features
+
+- Added real-time collaboration for teams to edit docs simultaneously.
+- Introduced version history with diff views for tracking changes.
+
+## Improvements
+
+- Enhanced search performance, now indexing `<100ms` for large sites.
+- Better mobile responsiveness with improved touch navigation.
+
+## Bug Fixes
+
+- Fixed rendering issues with nested `{code blocks}` in MDX files.
+- Resolved authentication errors during API key rotation.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["bugfix", "improvement"]} id="previous">
+
+## Improvements
+
+- Optimized build times by 40% for static site generation.
+- Added customizable brand colors, defaulting to `#3B82F6`.
+
+## Bug Fixes
+
+- Corrected table alignment problems in dark mode.
+- Patched security vulnerability in webhook endpoints (CVE-2024-1234).
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]} id="initial">
+
+## New Features
+
+- Core documentation engine with MDX v3 support.
+- Integrated component library including `<Callout>`, `<Steps>`, and `<Tabs>`.
+- Full-text search across all pages.
+
+## Breaking Changes
+
+- Migrated from v0.x config format; update your `r.config.js` file.
+
+</Update>
+
+## Upcoming Features
+
+<ExpandableGroup>
+  <Expandable title="Version 1.3.0 Preview" default-open="false">
+    Plan to introduce AI-assisted content generation and advanced analytics. You will generate summaries automatically and track engagement metrics.
+    
+    <CodeGroup tabs="JavaScript,Python">
+    ```javascript
+    // Example AI summary integration
+    const summary = await r.ai.summarize(pageContent);
+    console.log(summary);
+    ```
+    ```python
+    # Example AI summary integration
+    summary = r.ai.summarize(page_content)
+    print(summary)
+    ```
+    </CodeGroup>
+  </Expandable>
+</ExpandableGroup>
+
+| Version | Date       | Key Changes                  |
+|---------|------------|------------------------------|
+| v1.2.0  | 2024-10-15 | Collaboration, search speed |
+| v1.1.0  | 2024-09-20 | Build optimization, security|
+| v1.0.0  | 2024-08-10 | Initial release             |
